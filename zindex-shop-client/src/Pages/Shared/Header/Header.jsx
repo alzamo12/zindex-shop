@@ -6,20 +6,20 @@ import Navbar from "../Navbar/Navbar";
 
 const Header = () => {
   return (
-    <div className="">
-      <div className="header w-full h-7 bg-purple-500 text-center text-white">
+    <div className="w-full">
+      <div className="header w-screen  h-7 bg-purple-500 text-center text-white">
         <div className="top-strip ">
           <div className="container text-center mx-auto">
             <p>Due to <span className="font-bold">Covid-19 pandamic</span> orders may be delayed to you. Kindly accept it.</p>
           </div>
         </div>
       </div>
-      <div className="flex max-w-7xl mx-auto items-center gap-20">
+      <div className="flex max-w-6xl mx-auto items-center gap-20">
         <div className="py-4 flex items-center">
           <img className="h-24" src="https://i.ibb.co.com/dwb0hC33/Adobe-Express-file.png" alt="" />
         </div>
         <div className="flex items-center justify-between w-full">
-          <div className="flex w-full">
+          <div className="flex w-full gap-5">
             <CountryDropDown></CountryDropDown>
             {/* header search starts here */}
             <SearchBox></SearchBox>
