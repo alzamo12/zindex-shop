@@ -1,0 +1,23 @@
+.slick-arrow{
+    position: absolute;
+    z-index: 100;
+    top: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 100%;
+    background-color: black;
+}
+
+.slick-arrow.slick-next{
+    right: 25px !important;
+}
+.slick-arrow.slick-prev{
+    left: 25px !important
+}
+
+.slick-arrow.slick-next::before{
+    content: '\f104';
+}

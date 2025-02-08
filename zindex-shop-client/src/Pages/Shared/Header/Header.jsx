@@ -14,7 +14,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-      <div className="flex max-w-6xl mx-auto items-center gap-20">
+      <div className="flex lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl  mx-auto items-center gap-20">
         <div className="py-4 flex items-center">
           <img className="h-24" src="https://i.ibb.co.com/dwb0hC33/Adobe-Express-file.png" alt="" />
         </div>
