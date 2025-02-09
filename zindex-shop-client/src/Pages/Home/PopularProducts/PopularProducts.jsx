@@ -88,7 +88,7 @@ const PopularProducts = () => {
 
                     {/* end of navbar */}
                     <h2 className="text-3xl my-5 font-bold">Popular Products</h2>
-                    <div className='max-w-4xl w-full'>
+                    <div className='max-w-xl 2xl:max-w-4xl w-full'>
                         <Slider {...productSettings}>
                             <div className="card bg-base-100 w-96 shadow-sm">
                                 <figure>
@@ -151,7 +151,7 @@ const PopularProducts = () => {
                     </div>
                     <div className='mt-8'>
                         <h2 className="text-3xl my-5 font-bold">New Products</h2>
-                        <div className='max-w-4xl w-full'>
+                        <div className='max-w-xl 2xl:max-w-4xl w-full'>
                             <Slider {...productSettings}>
                                 <div className="card bg-base-100 w-96 shadow-sm">
                                     <figure>
