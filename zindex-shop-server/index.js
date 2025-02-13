@@ -25,13 +25,27 @@ async function run() {
         await client.connect();
 
         const userCollection = client.db('zindexShop').collection("userCollection");
+        const productCollection = client.db('zindexShop').collection("productCollection");
+        // const productCollection = client.db('zindexShop').collection("productCollection");
 
-        // User Collection
+        // User related api's
         app.post('/user', async(req, res) => {
             const user = req.body;
             console.log("server hitted user")
             const result = await userCollection.insertOne(user);
             res.send(result)
+        })
+
+
+        // products related api's
+        app.get('/products', async(req, res) => {
+            const {type } = req.query;
+            const filter = {
+                type
+            };
+            const products = await productCollection.find(filter).toArray();
+            console.log(products.length)
+            res.send(products)
         })
 
 

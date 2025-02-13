@@ -5,9 +5,12 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import { NavLink } from "react-router";
 
+import TypeBasedProduct from '../../../Components/typeBasedProduct/typeBasedProduct';
 
 
 const PopularProducts = () => {
+
+    // const axiosSecure = useAxiosSecure();
 
     const settings = {
         dots: true,
@@ -44,6 +47,16 @@ const PopularProducts = () => {
         autoplay: true
     };
 
+    // const { data: products = [] } = useQuery({
+    //     queryKey: ['product'],
+    //     queryFn: async () => {
+    //         const res = await axiosSecure.get('/products?type=digital')
+    //         return res.data
+    //     }
+    // })
+
+    // console.log(products)
+
     return (
         <div className="w-full">
 
@@ -52,9 +65,6 @@ const PopularProducts = () => {
                     <img className="w-80 h-[450px] rounded-xl" src="https://i.ibb.co.com/TDMKy9fQ/sales-banner.jpg" alt="" />
                     <img className="w-80 h-[450px] rounded-xl" src="https://i.ibb.co.com/TDMKy9fQ/sales-banner.jpg" alt="" />
                 </figure>
-                {/* <figure>
-                    <img className="w-80 h-[450px] rounded-xl" src="https://i.ibb.co.com/TDMKy9fQ/sales-banner.jpg" alt="" />
-                </figure> */}
                 <div className="card-body py-0 my-0">
                     {/* navbar of popular products for route and products changing */}
                     <div className="navbar bg-base-100 shadow-sm">
@@ -87,131 +97,13 @@ const PopularProducts = () => {
                     </div>
 
                     {/* end of navbar */}
-                    <h2 className="text-3xl my-5 font-bold">Popular Products</h2>
                     <div className='max-w-xl 2xl:max-w-4xl w-full'>
-                        <Slider {...productSettings}>
-                            <div className="card bg-base-100 w-96 shadow-sm">
-                                <figure>
-                                    <img
-                                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                        alt="Shoes" />
-                                </figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Card Title</h2>
-                                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                                    <div className="card-actions justify-end">
-                                        <button className="btn btn-primary">Buy Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card bg-base-100 w-96 shadow-sm">
-                                <figure>
-                                    <img
-                                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                        alt="Shoes" />
-                                </figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Card Title</h2>
-                                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                                    <div className="card-actions justify-end">
-                                        <button className="btn btn-primary">Buy Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card bg-base-100 w-96 shadow-sm">
-                                <figure>
-                                    <img
-                                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                        alt="Shoes" />
-                                </figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Card Title</h2>
-                                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                                    <div className="card-actions justify-end">
-                                        <button className="btn btn-primary">Buy Now</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="card bg-base-100 w-96 shadow-sm">
-                                <figure>
-                                    <img
-                                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                        alt="Shoes" />
-                                </figure>
-                                <div className="card-body">
-                                    <h2 className="card-title">Card Title</h2>
-                                    <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                                    <div className="card-actions justify-end">
-                                        <button className="btn btn-primary">Buy Now</button>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </Slider>
+                        <h2 className="text-3xl my-5 font-bold">Physical Products</h2>
+                        <TypeBasedProduct type="physical"></TypeBasedProduct>
                     </div>
-                    <div className='mt-8'>
-                        <h2 className="text-3xl my-5 font-bold">New Products</h2>
-                        <div className='max-w-xl 2xl:max-w-4xl w-full'>
-                            <Slider {...productSettings}>
-                                <div className="card bg-base-100 w-96 shadow-sm">
-                                    <figure>
-                                        <img
-                                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                            alt="Shoes" />
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Card Title</h2>
-                                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="card bg-base-100 w-96 shadow-sm">
-                                    <figure>
-                                        <img
-                                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                            alt="Shoes" />
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Card Title</h2>
-                                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="card bg-base-100 w-96 shadow-sm">
-                                    <figure>
-                                        <img
-                                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                            alt="Shoes" />
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Card Title</h2>
-                                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="card bg-base-100 w-96 shadow-sm">
-                                    <figure>
-                                        <img
-                                            src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-                                            alt="Shoes" />
-                                    </figure>
-                                    <div className="card-body">
-                                        <h2 className="card-title">Card Title</h2>
-                                        <p>A card component has a figure, a body part, and inside body there are title and actions parts</p>
-                                        <div className="card-actions justify-end">
-                                            <button className="btn btn-primary">Buy Now</button>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </Slider>
-                        </div>
+                    <div className='max-w-xl 2xl:max-w-4xl w-full mt-8'>
+                        <h2 className="text-3xl my-5 font-bold">Digital Products</h2>
+                        <TypeBasedProduct type="digital"></TypeBasedProduct>
                     </div>
                 </div>
             </div>
